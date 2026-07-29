@@ -890,12 +890,12 @@ h3 {
 }
 
 .lightbox.show .lightbox-content.crop-status-lightbox {
-    transform: scale(1.18);
+    transform: scale(1.35);
     clip-path: none;
 }
 
 .lightbox.show .lightbox-content.crop-extra-lightbox {
-    transform: scale(1.35);
+    transform: scale(1.75);
     clip-path: none;
 }
 
