@@ -902,12 +902,20 @@ h3 {
 .lightbox-close {
     position: absolute;
     top: 20px;
-    right: 35px;
+    right: 25px;
     color: #f1f1f1;
-    font-size: 40px;
+    font-size: 45px;
     font-weight: bold;
     cursor: pointer;
     transition: var(--transition);
+    z-index: 2005;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
 }
 
 .lightbox-close:hover,
