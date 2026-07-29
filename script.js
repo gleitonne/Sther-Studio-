@@ -82,35 +82,56 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Lightbox / Zoom na Galeria
+    // Lightbox / Zoom na Galeria com Carrossel
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxClose = document.getElementById('lightbox-close');
+    const lightboxPrev = document.getElementById('lightbox-prev');
+    const lightboxNext = document.getElementById('lightbox-next');
     const galleryImages = document.querySelectorAll('.gallery-item img');
+    let currentIndex = 0;
 
     if (lightbox && galleryImages.length > 0) {
+        
+        function updateLightbox(index) {
+            const img = galleryImages[index];
+            lightboxImg.src = img.src;
+            
+            if (img.classList.contains('crop-status')) {
+                lightboxImg.classList.add('crop-status-lightbox');
+            } else {
+                lightboxImg.classList.remove('crop-status-lightbox');
+            }
+            if (img.classList.contains('crop-extra')) {
+                lightboxImg.classList.add('crop-extra-lightbox');
+            } else {
+                lightboxImg.classList.remove('crop-extra-lightbox');
+            }
+        }
+
         // Abrir o lightbox ao clicar na imagem
-        galleryImages.forEach(img => {
+        galleryImages.forEach((img, index) => {
             img.addEventListener('click', function() {
+                currentIndex = index;
                 lightbox.classList.add('show');
-                lightboxImg.src = this.src;
-                
-                // Transfere o efeito de crop se existir na miniatura
-                if (this.classList.contains('crop-status')) {
-                    lightboxImg.classList.add('crop-status-lightbox');
-                } else {
-                    lightboxImg.classList.remove('crop-status-lightbox');
-                }
-                if (this.classList.contains('crop-extra')) {
-                    lightboxImg.classList.add('crop-extra-lightbox');
-                } else {
-                    lightboxImg.classList.remove('crop-extra-lightbox');
-                }
-                
+                updateLightbox(currentIndex);
                 // Impede o scroll do body quando o lightbox está aberto
                 document.body.style.overflow = 'hidden';
             });
         });
+
+        const showNext = () => {
+            currentIndex = (currentIndex + 1) % galleryImages.length;
+            updateLightbox(currentIndex);
+        };
+
+        const showPrev = () => {
+            currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+            updateLightbox(currentIndex);
+        };
+
+        if(lightboxNext) lightboxNext.addEventListener('click', showNext);
+        if(lightboxPrev) lightboxPrev.addEventListener('click', showPrev);
 
         // Função para fechar
         const closeLightbox = () => {
@@ -119,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         // Fechar ao clicar no "X"
-        lightboxClose.addEventListener('click', closeLightbox);
+        if(lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
 
         // Fechar ao clicar fora da imagem (no fundo)
         lightbox.addEventListener('click', function(e) {
@@ -128,10 +149,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Fechar com a tecla ESC
+        // Controles de teclado
         document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && lightbox.classList.contains('show')) {
+            if (!lightbox.classList.contains('show')) return;
+            
+            if (e.key === 'Escape') {
                 closeLightbox();
+            } else if (e.key === 'ArrowRight') {
+                showNext();
+            } else if (e.key === 'ArrowLeft') {
+                showPrev();
             }
         });
     }
