@@ -822,7 +822,8 @@ h3 {
 }
 
 .gallery-item img.crop-extra {
-    transform: scale(1.35);
+    transform: scale(1.5);
+    object-position: center 20%;
 }
 
 .gallery-item:hover img {
@@ -834,7 +835,7 @@ h3 {
 }
 
 .gallery-item:hover img.crop-extra {
-    transform: scale(1.45);
+    transform: scale(1.6);
 }
 
 .gallery-placeholder {
@@ -894,8 +895,8 @@ h3 {
 }
 
 .lightbox.show .lightbox-content.crop-extra-lightbox {
-    transform: scale(1.25);
-    clip-path: inset(18% 0 20% 0);
+    transform: scale(1.35);
+    clip-path: inset(20% 0 28% 0);
 }
 
 .lightbox-close {
