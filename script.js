@@ -1,4 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Dark Mode Toggle
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    if (themeToggleBtn) {
+        const themeIcon = themeToggleBtn.querySelector('i');
+        
+        // Verifica se há tema salvo
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const isDark = document.body.classList.contains('dark-mode');
+            
+            if (isDark) {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    }
+
     // Menu Mobile Toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');

@@ -1212,3 +1212,67 @@ h3 {
         font-size: 1.75rem;
     }
 }
+
+/* ==========================================================================
+   Dark Mode
+   ========================================================================== */
+body.dark-mode {
+    --color-bg: #0d1117;
+    --color-bg-light: #161b22;
+    --color-primary: #5a8bb3; /* Azul mais claro para destacar no fundo escuro */
+    --color-primary-light: #2c4a63;
+    --color-gray-dark: #c9d1d9; /* Cor do texto claro */
+    --color-gray: #8b949e;
+    --color-gray-light: #30363d;
+    --color-white: #1f2428; /* Cor dos cards (um cinza escuro) */
+}
+
+body.dark-mode .btn-primary,
+body.dark-mode .footer {
+    color: #ffffff; /* Mantém o texto branco no botão primário e rodapé */
+}
+
+body.dark-mode .badge {
+    background-color: var(--color-white);
+    color: #ffffff;
+    border-color: var(--color-gray-light);
+}
+
+body.dark-mode .footer {
+    background-color: #0d1318; /* Rodapé ainda mais escuro */
+}
+body.dark-mode .footer::before {
+    background-color: var(--color-bg);
+}
+
+body.dark-mode .feature-item,
+body.dark-mode .service-card,
+body.dark-mode .contact-grid {
+    background-color: var(--color-white); /* Cards escuros */
+}
+
+/* Garante que o navbar acompanhe o modo escuro */
+body.dark-mode .navbar {
+    background-color: rgba(13, 17, 23, 0.9);
+}
+
+/* Toggle Button */
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--color-primary);
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.theme-toggle:hover {
+    background-color: var(--color-primary-super-light);
+    transform: translateY(-2px);
+}
