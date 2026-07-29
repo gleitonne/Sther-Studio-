@@ -1260,7 +1260,7 @@ body.dark-mode .navbar {
 .theme-toggle {
     background: none;
     border: none;
-    color: var(--color-primary);
+    color: #f3c92a; /* Amarelo para a lua e o sol */
     font-size: 1.6rem;
     cursor: pointer;
     transition: var(--transition);
