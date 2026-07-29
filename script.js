@@ -101,6 +101,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
                     lightboxImg.classList.remove('crop-status-lightbox');
                 }
+                if (this.classList.contains('crop-extra')) {
+                    lightboxImg.classList.add('crop-extra-lightbox');
+                } else {
+                    lightboxImg.classList.remove('crop-extra-lightbox');
+                }
                 
                 // Impede o scroll do body quando o lightbox está aberto
                 document.body.style.overflow = 'hidden';
