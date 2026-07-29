@@ -96,12 +96,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-size: clamp(2rem, 8vw, 4.5rem);
     letter-spacing: -0.5px;
 }
 
 h2 {
-    font-size: clamp(2.5rem, 5vw, 3.25rem);
+    font-size: clamp(1.75rem, 6vw, 3.25rem);
 }
 
 h3 {
@@ -834,24 +834,92 @@ h3 {
     }
     
     .hero {
-        padding-top: 150px;
-        min-height: 80vh;
+        padding-top: 130px;
+        padding-bottom: 80px;
+        min-height: 70vh;
     }
     
     .hero-buttons {
         flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
     }
     
     .about-container {
         grid-template-columns: 1fr;
+        gap: 60px;
     }
     
     .about-image-shape {
-        max-width: 400px;
-        margin: 0 auto;
+        max-width: 100%;
+        border-width: 4px;
+        padding: 20px;
+    }
+
+    .experience-badge {
+        width: 100px;
+        height: 100px;
+        padding: 16px;
+        bottom: -20px;
+        right: -10px;
+        border-width: 4px;
+    }
+
+    .experience-badge .number {
+        font-size: 1.5rem;
+    }
+    
+    .experience-badge .text {
+        font-size: 0.6rem;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 24px;
+        text-align: center;
     }
     
     .services-grid, .features-grid {
         grid-template-columns: 1fr;
+    }
+
+    .section-padding {
+        padding: 80px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .logo-text {
+        font-size: 1.25rem;
+    }
+
+    .hero-overlay {
+        width: 400px;
+        height: 400px;
+    }
+
+    .about-image-shape {
+        border-radius: 120px 120px 0 0;
+    }
+    
+    .footer-logo span {
+        font-size: 1.25rem;
+    }
+
+    .footer-desc {
+        font-size: 0.95rem;
+    }
+
+    .hour-row {
+        flex-direction: column;
+        gap: 4px;
+        text-align: center;
     }
 }
