@@ -240,8 +240,87 @@
         </div>
     </section>
 
-    <!-- Contato e Footer -->
-    <footer id="contato" class="footer">
+    <!-- Galeria -->
+    <section id="galeria" class="gallery section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Nossa Galeria</h2>
+                <div class="separator center-separator"></div>
+                <p class="section-subtitle">Um pouco do nosso espaço e do nosso trabalho.</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="./Logo Sther  2026-07-29 at 09.35.36.jpeg" alt="Sther Studio Logo">
+                </div>
+                <div class="gallery-item">
+                    <img src="./Visão valores 2026-07-29 at 12.23.08.jpeg" alt="Nossos Valores">
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-camera"></i>
+                        <span>Em breve</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-camera"></i>
+                        <span>Em breve</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="contact section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Fale Conosco</h2>
+                <div class="separator center-separator"></div>
+                <p class="section-subtitle">Estamos ansiosos para receber você.</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Formulário -->
+                <div class="contact-form-container">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">WhatsApp</label>
+                            <input type="tel" id="phone" placeholder="(11) 90000-0000" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Serviço de Interesse</label>
+                            <select id="service">
+                                <option value="">Selecione um serviço</option>
+                                <option value="cabelo">Cabelo Feminino</option>
+                                <option value="masculino">Corte Masculino</option>
+                                <option value="manicure">Manicure / Pedicure</option>
+                                <option value="outro">Outros</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem (Opcional)</label>
+                            <textarea id="message" rows="4" placeholder="Como podemos ajudar?"></textarea>
+                        </div>
+                        <button type="button" class="btn btn-primary w-100" onclick="alert('Formulário enviado com sucesso! Entraremos em contato em breve.')">Enviar Mensagem</button>
+                    </form>
+                </div>
+
+                <!-- Mapa -->
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m2!1s0x94ce63032598be69%3A0xc3f58a7065985868!2sR.%20Arquimedes%20Nolalla%2C%2020%20-%20Vila%20Monte%20Siao%2C%20Po%C3%A1%20-%20SP%2C%2008552-090!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container footer-container">
             <div class="footer-info">
                 <a href="#" class="footer-logo">
@@ -293,6 +372,11 @@
             </div>
         </div>
     </footer>
+
+    <!-- Botão Flutuante do WhatsApp -->
+    <a href="https://wa.me/5511961010296?text=Ol%C3%A1!%20Acessei%20o%20site%20do%20Sther%20Studio%20de%20Beleza%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20para%20agendar%20um%20hor%C3%A1rio." class="float-whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <script src="script.js"></script>
 </body>
