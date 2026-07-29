@@ -890,12 +890,12 @@ h3 {
 }
 
 .lightbox.show .lightbox-content.crop-status-lightbox {
-    transform: scale(1.35);
+    transform: scale(1.45);
     clip-path: none;
 }
 
 .lightbox.show .lightbox-content.crop-extra-lightbox {
-    transform: scale(1.75);
+    transform: scale(2.2) translateY(5%);
     clip-path: none;
 }
 
@@ -1178,6 +1178,10 @@ h3 {
         padding: 80px 0;
     }
 
+    /* Lightbox Fullscreen no Celular */
+    .lightbox-content {
+        object-fit: cover;
+    }
 }
 
 @media (max-width: 480px) {
