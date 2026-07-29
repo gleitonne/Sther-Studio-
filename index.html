@@ -250,23 +250,38 @@
             </div>
             
             <div class="gallery-grid">
+                <!-- Fotos do Salão -->
                 <div class="gallery-item">
-                    <img src="./Logo Sther  2026-07-29 at 09.35.36.jpeg" alt="Sther Studio Logo">
+                    <img src="./fotos clientes e salão/salão 2026-07-29 at 13.28.52.jpeg" alt="Fachada e interior do Salão">
                 </div>
                 <div class="gallery-item">
-                    <img src="./Visão valores 2026-07-29 at 12.23.08.jpeg" alt="Nossos Valores">
+                    <img src="./fotos clientes e salão/salao 2026-07-29 at 13.30.31.jpeg" alt="Espaço interno Sther Studio">
                 </div>
                 <div class="gallery-item">
-                    <div class="gallery-placeholder">
-                        <i class="fas fa-camera"></i>
-                        <span>Em breve</span>
-                    </div>
+                    <img src="./fotos clientes e salão/salão 2026-07-29 at 13.31.45.jpeg" alt="Detalhes do Salão">
                 </div>
                 <div class="gallery-item">
-                    <div class="gallery-placeholder">
-                        <i class="fas fa-camera"></i>
-                        <span>Em breve</span>
-                    </div>
+                    <img src="./fotos clientes e salão/salão 2026-07-29 at 13.33.43.jpeg" alt="Estrutura do Salão">
+                </div>
+
+                <!-- Fotos de Clientes / Trabalhos -->
+                <div class="gallery-item">
+                    <img src="./fotos clientes e salão/neide  2026-07-29 at 12.58.09.jpeg" alt="Cliente Neide - Cabelo Feminino">
+                </div>
+                <div class="gallery-item">
+                    <img src="./fotos clientes e salão/amiga  2026-07-29 at 13.03.52.jpeg" alt="Cliente - Cabelo Feminino">
+                </div>
+                <div class="gallery-item">
+                    <img src="./fotos clientes e salão/WhatsApp Image 2026-07-29 at 13.10.07.jpeg" alt="Trabalho realizado">
+                </div>
+                <div class="gallery-item">
+                    <img src="./fotos clientes e salão/vania 2026-07-29 at 13.13.46.jpeg" alt="Cliente Vania - Cabelo Feminino">
+                </div>
+                <div class="gallery-item">
+                    <img src="./fotos clientes e salão/gabi  2026-07-29 at 13.16.07.jpeg" alt="Cliente Gabi - Cabelo Feminino">
+                </div>
+                <div class="gallery-item">
+                    <img src="./fotos clientes e salão/WhatsApp Image 2026-07-29 at 13.35.10.jpeg" alt="Trabalho em destaque">
                 </div>
             </div>
         </div>
@@ -284,7 +299,7 @@
             <div class="contact-grid">
                 <!-- Formulário -->
                 <div class="contact-form-container">
-                    <form class="contact-form">
+                    <form class="contact-form" id="whatsappForm">
                         <div class="form-group">
                             <label for="name">Nome Completo</label>
                             <input type="text" id="name" placeholder="Seu nome" required>
@@ -295,19 +310,19 @@
                         </div>
                         <div class="form-group">
                             <label for="service">Serviço de Interesse</label>
-                            <select id="service">
+                            <select id="service" required>
                                 <option value="">Selecione um serviço</option>
-                                <option value="cabelo">Cabelo Feminino</option>
-                                <option value="masculino">Corte Masculino</option>
-                                <option value="manicure">Manicure / Pedicure</option>
-                                <option value="outro">Outros</option>
+                                <option value="Cabelo Feminino">Cabelo Feminino</option>
+                                <option value="Corte Masculino">Corte Masculino</option>
+                                <option value="Manicure / Pedicure">Manicure / Pedicure</option>
+                                <option value="Outros">Outros</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="message">Mensagem (Opcional)</label>
                             <textarea id="message" rows="4" placeholder="Como podemos ajudar?"></textarea>
                         </div>
-                        <button type="button" class="btn btn-primary w-100" onclick="alert('Formulário enviado com sucesso! Entraremos em contato em breve.')">Enviar Mensagem</button>
+                        <button type="submit" class="btn btn-primary w-100">Enviar Mensagem</button>
                     </form>
                 </div>
 

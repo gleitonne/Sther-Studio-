@@ -58,4 +58,27 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Formulário do WhatsApp
+    const whatsappForm = document.getElementById('whatsappForm');
+    if (whatsappForm) {
+        whatsappForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+            
+            let text = `Olá! Meu nome é ${name}. Gostaria de agendar ou saber mais sobre: ${service}.`;
+            if (message) {
+                text += `\n\nMensagem: ${message}`;
+            }
+            
+            const encodedText = encodeURIComponent(text);
+            const whatsappNumber = '5511961010296';
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
+            
+            window.open(whatsappUrl, '_blank');
+        });
+    }
 });

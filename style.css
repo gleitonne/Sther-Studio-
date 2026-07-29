@@ -1027,8 +1027,13 @@ h3 {
         text-align: center;
     }
     
-    .services-grid, .features-grid, .mvv-grid, .gallery-grid {
+    .services-grid, .features-grid, .mvv-grid {
         grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
     }
 
     .contact-grid {
@@ -1075,6 +1080,10 @@ h3 {
         flex-direction: column;
         gap: 4px;
         text-align: center;
+    }
+
+    .gallery-grid {
+        gap: 8px;
     }
 
     .float-whatsapp {
