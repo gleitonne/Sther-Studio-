@@ -1,0 +1,11 @@
+{
+  "name": "sther-studio",
+  "version": "1.0.0",
+  "description": "Sther Studio de Beleza - Site",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
