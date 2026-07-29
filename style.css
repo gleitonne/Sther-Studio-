@@ -1194,7 +1194,7 @@ h3 {
     }
     
     .lightbox.show .lightbox-content.crop-extra-lightbox {
-        transform: scale(1.6);
+        transform: scale(2.1);
         clip-path: none;
     }
 }
