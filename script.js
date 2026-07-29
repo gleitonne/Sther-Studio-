@@ -81,4 +81,45 @@ document.addEventListener('DOMContentLoaded', () => {
             window.open(whatsappUrl, '_blank');
         });
     }
+
+    // Lightbox / Zoom na Galeria
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.getElementById('lightbox-close');
+    const galleryImages = document.querySelectorAll('.gallery-item img');
+
+    if (lightbox && galleryImages.length > 0) {
+        // Abrir o lightbox ao clicar na imagem
+        galleryImages.forEach(img => {
+            img.addEventListener('click', function() {
+                lightbox.classList.add('show');
+                lightboxImg.src = this.src;
+                // Impede o scroll do body quando o lightbox está aberto
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Função para fechar
+        const closeLightbox = () => {
+            lightbox.classList.remove('show');
+            document.body.style.overflow = '';
+        };
+
+        // Fechar ao clicar no "X"
+        lightboxClose.addEventListener('click', closeLightbox);
+
+        // Fechar ao clicar fora da imagem (no fundo)
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        // Fechar com a tecla ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && lightbox.classList.contains('show')) {
+                closeLightbox();
+            }
+        });
+    }
 });
