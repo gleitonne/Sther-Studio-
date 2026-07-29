@@ -94,6 +94,14 @@ document.addEventListener('DOMContentLoaded', () => {
             img.addEventListener('click', function() {
                 lightbox.classList.add('show');
                 lightboxImg.src = this.src;
+                
+                // Transfere o efeito de crop se existir na miniatura
+                if (this.classList.contains('crop-status')) {
+                    lightboxImg.classList.add('crop-status-lightbox');
+                } else {
+                    lightboxImg.classList.remove('crop-status-lightbox');
+                }
+                
                 // Impede o scroll do body quando o lightbox está aberto
                 document.body.style.overflow = 'hidden';
             });
