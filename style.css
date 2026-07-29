@@ -958,11 +958,13 @@ h3 {
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 40px;
     background-color: var(--color-white);
-    padding: 40px;
+    padding: 32px;
     border-radius: var(--br-lg);
     box-shadow: var(--shadow-md);
+    max-width: 950px;
+    margin: 0 auto;
 }
 
 .contact-form {
@@ -1008,7 +1010,7 @@ h3 {
 .contact-map {
     border-radius: var(--br-md);
     overflow: hidden;
-    min-height: 400px;
+    min-height: 320px;
 }
 
 /* ==========================================================================
