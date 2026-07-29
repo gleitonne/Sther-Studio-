@@ -479,6 +479,15 @@ h3 {
 }
 
 /* ==========================================================================
+   Missão, Visão e Valores
+   ========================================================================== */
+.mvv-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+/* ==========================================================================
    Serviços
    ========================================================================== */
 .services-grid {
@@ -882,7 +891,7 @@ h3 {
         text-align: center;
     }
     
-    .services-grid, .features-grid {
+    .services-grid, .features-grid, .mvv-grid {
         grid-template-columns: 1fr;
     }
 
